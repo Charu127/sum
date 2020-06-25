@@ -1,0 +1,28 @@
+int n,i,j;
+   scanf("%d",&n);
+   int a[n],b[100],c=0;
+   for(i=0;i<n;i++){
+       scanf("%d",&a[i]);
+       b[i]=-1; //intialise the new array 
+   }
+   for(i=0;i<n;i++){
+       c=1;
+       for(j=i+1;j<n;j++){
+           if(a[i]==a[j]){
+               c++;
+               b[j]=0;//if c++ condition is true it will pass 
+            }
+       }
+       if(b[i]!=0){
+           b[i]=c;//checking how many times it passes
+           printf("%d",b[i]);
+        }
+    }
+    for(i=0;i<n;i++){
+       if(b[i]==1){
+           printf("%d ",a[i]);
+       }
+   }
+}
+
+
